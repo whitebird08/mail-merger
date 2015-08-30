@@ -1,0 +1,42 @@
+extends layout
+
+block content  
+ body
+    .grandpa.grandpa-flex
+      .grandpa-content
+        .parent
+          .item
+            .mailMerge Mail Merge
+          .item empty
+        .parent
+          .item Enter names / emails (one per line):
+          .item Enter the text.  The following solutions are valid:
+            .requirements
+              ul
+                li {first}
+                li {last}
+                li {email}
+        .parent
+          .item Contacts:
+            .contacts
+            textarea(id='contacts', type=text, placeholder='first, last, email@example.com')
+          .item Subject
+            .subject
+            textarea(id='subject', type=text, placeholder='subject')
+            .body Body
+            textarea(id='body', type=text, placeholder='body')
+        .parent
+          .item empty
+          .item
+            .preview 
+            input(id ='preview', type='submit', value='preview')
+        .parent
+          .recipientPreviews
+            .recipient
+            input(id ='deleteEmail', type='submit', value='x')
+            textarea(id='contacts', type=text, placeholder='first, last, email@example.com')
+            textarea(id='subject', type=text, placeholder='subject')
+            textarea(id='body', type=text, placeholder='body')
+           
+
+     
