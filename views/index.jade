@@ -16,30 +16,29 @@ block content
                 li {first}
                 li {last}
                 li {email}
-        .parent
-          form(class='form' method="post")
+        
+        form(class='form' method="post")
+          .parent
             .item Contacts:
               .contacts
-              textarea(id='contacts', name='contacts', type=text, placeholder='first, last, email@example.com')
-            
+                textarea(id='contacts', name='contacts', type='text', placeholder='first, last, email@example.com')
             .item Subject
               .subject
-                textarea(id='subject', name-'subject', type=text, placeholder='subject')
-              .body Body
-                textarea(id='message', name='message', type=text, placeholder='message')
+                textarea(id='subject', name-'subject', type='text', placeholder='subject')
+              .item Message
+              .message
+                textarea(id='message', name='message', type='text', placeholder='message')
+              .preview
                 input(id ='preview', name='preview', type='submit', value='preview')
-        //- .parent
-        //-   .item empty
-          //- .item
-            //- .preview 
+   
             
         .parent
           .recipientPreviews 
             .recipient
             input(id ='deleteEmail', name='deleteEmail', type='submit', value='x')
-            textarea(id='contacts', name='contacts', type=text, placeholder='first last email@example.com')
-            textarea(id='subject', name='subject', type=text, placeholder='subject')
-            textarea(id='message', name='message', type=text, placeholder='message')
+            textarea(id='contacts', name='contacts', type='text', placeholder='first last email@example.com')
+            textarea(id='subject', name='subject', type='text', placeholder='subject')
+            textarea(id='message', name='message', type='text', placeholder='message')
          
 
      
