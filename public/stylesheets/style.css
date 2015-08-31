@@ -22,6 +22,7 @@
   font-color:;
   font-size: 18px;
 
+
 }
 .mailMerge{
 /*height: 50px;*/
@@ -41,7 +42,7 @@
   width:80%;
   height:40px;
 }
-#body{
+#message{
   font-size: 18px;
   width:80%;
   height:160px;
