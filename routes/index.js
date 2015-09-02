@@ -14,10 +14,12 @@ router.post('/', function(req, res, next) {
   console.log(subject)
   var message = req.body.message
   console.log(message)
-  
-  var recipient = {preview : message}
 
-  res.render('index', {preview: message});
+  res.render('index', {
+    contacts: contacts,
+    subject: subject,
+    message: message
+  });
 });
 
 module.exports = router;

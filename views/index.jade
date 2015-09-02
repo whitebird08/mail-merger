@@ -9,13 +9,13 @@ block content
             .mailMerge Mail Merge
           .item empty
         .parent
-          .item Enter names / emails (one per line):
-          .item Enter the text.  The following solutions are valid:
-            .requirements
-              ul
-                li {first}
-                li {last}
-                li {email}
+          //- .item Enter names / emails (one per line):
+          //- .item Enter the text.  The following solutions are valid:
+          //-   .requirements
+          //-     //- ul
+          //-     //-   li {first}
+          //-     //-   li {last}
+          //-     //-   li {email}
         
         form(class='form' method="post" action='/')
           .parent
@@ -33,7 +33,8 @@ block content
    
          //if updatePage   ?????
         .parent
-          .recipientPreviews Recipient Previews
-            #{preview}
-            
+          .recipientPreviews  Recipient Previews
+            p= contacts
+            p #{subject}
+            p #{message}
      
