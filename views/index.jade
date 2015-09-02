@@ -17,28 +17,23 @@ block content
                 li {last}
                 li {email}
         
-        form(class='form' method="post")
+        form(class='form' method="post" action='/')
           .parent
             .item Contacts:
               .contacts
                 textarea(id='contacts', name='contacts', type='text', placeholder='first, last, email@example.com')
             .item Subject
               .subject
-                textarea(id='subject', name-'subject', type='text', placeholder='subject')
+                textarea(id='subject', name='subject', type='text', placeholder='subject')
               .item Message
-              .message
+              .message 
                 textarea(id='message', name='message', type='text', placeholder='message')
               .preview
-                input(id ='preview', name='preview', type='submit', value='preview')
+              input(id ='preview', name='preview', type='submit', value='preview')
    
-            
+         //if updatePage   ?????
         .parent
-          .recipientPreviews 
-            .recipient
-            input(id ='deleteEmail', name='deleteEmail', type='submit', value='x')
-            textarea(id='contacts', name='contacts', type='text', placeholder='first last email@example.com')
-            textarea(id='subject', name='subject', type='text', placeholder='subject')
-            textarea(id='message', name='message', type='text', placeholder='message')
-         
-
+          .recipientPreviews Recipient Previews
+            #{preview}
+            
      
