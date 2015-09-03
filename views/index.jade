@@ -27,14 +27,25 @@ block content
                 textarea(id='subject', name='subject', type='text', placeholder='subject')
               .item Message
               .message 
-                textarea(id='message', name='message', type='text', placeholder='message')
+                textarea(id='message', name='message', type='text', placeholder='message') 
+
               .preview
               input(id ='preview', name='preview', type='submit', value='preview')
    
          //if updatePage   ?????
         .parent
-          .recipientPreviews  Recipient Previews
-            p= contacts
-            p #{subject}
-            p #{message}
+          .recipientPreviews  Emails
+            .recipient
+              if (contacts)
+                for contact in contacts
+                  p='To: ' + contact.firstName 
+                  p= contact.lastName
+                  p= contact.email  
+              
+                  p Subject: #{subject}
+                  p #{message}
+         
+            input(id ='delete', name='delete', type='submit', value='x')
+
+                  
      

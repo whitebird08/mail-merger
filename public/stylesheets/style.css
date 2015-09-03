@@ -52,11 +52,12 @@
 }
 .recipientPreviews{
   /*height: 50px;*/
+
   margin: 5px;
   background: skyblue;
-  color: black;
-  text-align: center;
-  line-height: 50px;
+  color: black; 
+  text-align: left;
+  line-height: 10px;
   font-weight: 600;
   font-color:;
   font-size: 18px;
@@ -72,6 +73,13 @@
   width: 18px
   padding:10px;
 }
+.recipient{
+  text-align: left;
+  outline-color: red;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 
 
 
