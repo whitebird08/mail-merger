@@ -38,10 +38,7 @@ block content
             .recipient
               if (previewMessage && previewMessage.length)
                 for preview in previewMessage
-                  p='To: ' + preview.firstName 
-                  p= preview.lastName
-                  p= preview.email  
-              
+                  p='To: ' + preview.firstName + preview.lastName + ' <' + preview.email + '>'
                   p Subject: #{subject}
                   p #{preview.message}
          
