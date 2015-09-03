@@ -6,7 +6,7 @@ block content
       .grandpa-content
         .parent
           .item
-            .mailMerge Mail Merge
+            .mailMergeTitle Mail Merge
           .item empty
         .parent
           //- .item Enter names / emails (one per line):
@@ -36,14 +36,14 @@ block content
         .parent
           .recipientPreviews  Emails
             .recipient
-              if (contacts)
-                for contact in contacts
-                  p='To: ' + contact.firstName 
-                  p= contact.lastName
-                  p= contact.email  
+              if (previewMessage && previewMessage.length)
+                for preview in previewMessage
+                  p='To: ' + preview.firstName 
+                  p= preview.lastName
+                  p= preview.email  
               
                   p Subject: #{subject}
-                  p #{message}
+                  p #{preview.message}
          
             input(id ='delete', name='delete', type='submit', value='x')
 
