@@ -17,7 +17,7 @@ block content
           //-     //-   li {last}
           //-     //-   li {email}
         
-        form(class='form' method="post" action='/')
+        form(id='thisForm' class='form' method="post" action='/')
           .parent
             .item Contacts:
               .contacts
@@ -30,19 +30,18 @@ block content
                 textarea(id='message', name='message', type='text', placeholder='message') 
 
               .preview
-              input(id ='preview', name='preview', type='submit', value='preview')
+              input(id ='preview', name='preview', type='submit', value='preview', onclick='myFunction()' )
    
          //if updatePage   ?????
         .parent
-          .recipientPreviews  Emails
+          .recipientPreviews 
+            p='Emails(' + previewMessage.length + ')'
             .recipient
               if (previewMessage && previewMessage.length)
                 for preview in previewMessage
-                  p='To: ' + preview.firstName + preview.lastName + ' <' + preview.email + '>'
+                  p='To: ' + preview.firstName + preview.lastName + ' < ' + preview.email + ' >'
                   p Subject: #{subject}
                   p #{preview.message}
-         
-            input(id ='delete', name='delete', type='submit', value='x')
-
-                  
+                  input(id ='delete', name='delete', type='submit', value='x')
+                
      

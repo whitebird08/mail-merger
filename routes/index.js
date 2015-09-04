@@ -11,8 +11,9 @@ router.post('/', function(req, res, next) {
   var contacts = req.body.contacts//getting input text from user/client
   var subject = req.body.subject//getting input text from user/client
   var message = req.body.message//getting input text from user/client
-
+  
   var previewMessage = mailMerge(contacts, message);
+
 
   res.render('index', {
     contacts: contacts,

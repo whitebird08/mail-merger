@@ -47,3 +47,22 @@ function changeText(){
   // replace the {} in the message, with the corresponding property from the contact object
   // (replace {first}) with obj.firstName
   // output what we send to the view, should be an array of messages
+
+
+// /////counter starts here
+//   var add = (function (){
+//     var counter = 0;
+//       return counter += 1;
+//   })();
+
+//   function numberOfEmails(){
+//       document.getElementById("emailNum").innerHTML = add();  
+//   }
+//   console.log(numberOfEmails())
+// //////counter ends here
+
+//- button(class='emailNum', type='button', onclick='numberOfEmails') Emails
+                //- p #{emailNum} 
+            //- input(id ='delete', name='delete', type='submit', value='x')
+
+                  
