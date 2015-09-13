@@ -1,6 +1,7 @@
 extends layout
 
 block content  
+
  body
     .grandpa.grandpa-flex
       .grandpa-content
@@ -16,7 +17,7 @@ block content
           //-     //-   li {first}
           //-     //-   li {last}
           //-     //-   li {email}
-        
+  
         form(id='thisForm' class='form' method="post" action='/')
           .parent
             .item Contacts:
@@ -32,16 +33,18 @@ block content
               .preview
               input(id ='preview', name='preview', type='submit', value='preview', onclick='myFunction()' )
    
-         //if updatePage   ?????
         .parent
           .recipientPreviews 
-            p='Emails(' + previewMessage.length + ')'
             .recipient
               if (previewMessage && previewMessage.length)
+                p='Emails(' + previewMessage.length + ')'
                 for preview in previewMessage
                   p='To: ' + preview.firstName + preview.lastName + ' < ' + preview.email + ' >'
                   p Subject: #{subject}
                   p #{preview.message}
-                  input(id ='delete', name='delete', type='submit', value='x')
-                
-     
+              
+     //- fieldset
+     //-    legend            
+     //-      form(action='/albums/' + theAlbum._id + "/delete", method='post', name='delete')
+     //-        button(type='submit') Delete
+     // event listener in each version ...pointing to parent/event.target
